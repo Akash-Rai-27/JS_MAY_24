@@ -6,9 +6,10 @@ function one(){
         const website = "joker";
         console.log(username)
      }
-     console.log(website)
+   //   console.log(website)
 
      two()
 }
 
 one()
+
