@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body bgcolor="black" text="white">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage("python");
+    addLanguage("Java");
+
+    function addLang(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+
+    }
+
+    addLang("ruby");
+    addLang("golang");
+
+
+    // edit
+
+    const secondLang = document.querySelector("li:nth-child(2)");
+
+    const newli = document.createElement('li');
+    newli.textContent = "coffee is best";
+    secondLang.replaceWith(newli);
+
+    //  edit
+    const third = document.querySelector("li:nth-child(3)");
+    const templi = document.createElement('li');
+    templi.appendChild(document.createTextNode("book shopping is best"));
+    third.replaceWith(templi);
+
+    //  remove 
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove();
+</script>
+</html>
