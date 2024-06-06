@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color:aliceblue">
+    <h2>Amazing Pictures</h2>
+    <ul id="images">
+        <li>
+            <img width="200px" id="one" src="https://images.pexels.com/photos/884788/pexels-photo-884788.jpeg" alt="photoshop">
+        </li>
+        <li>
+            <img width="200px" id="two" src="https://images.pexels.com/photos/884788/pexels-photo-884788.jpeg" alt="">
+        </li>
+        <li>
+            <img width="200px" id="three" src="https://images.pexels.com/photos/884788/pexels-photo-884788.jpeg" alt="">
+        </li>
+        <li>
+            <img width="200px" id="four" src="https://images.pexels.com/photos/884788/pexels-photo-884788.jpeg" alt="">
+        </li>
+        <li>
+            <a style="color: orange;" href="google.com" id="google">Google</a>
+        </li>
+        
+    </ul>
+</body>
+<script>
+    // document.getElementById('one').addEventListener('click',(e)=>{
+        
+    // }, false)
+
+    document.querySelector('#images').addEventListener('click',(e)=>{
+        console.log(e.target.parentNode);
+
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id)
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+    })
+
+</script>
+</html>
