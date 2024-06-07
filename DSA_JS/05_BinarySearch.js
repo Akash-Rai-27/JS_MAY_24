@@ -27,3 +27,8 @@ function binarySearch(arr, target){
 
     return -1;
 }
+
+// celing of  a number
+// floor of a number
+
+
